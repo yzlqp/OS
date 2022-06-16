@@ -1,0 +1,461 @@
+mkdir -p build/kernel/lib/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/lib/string.c.o kernel/lib/string.c
+mkdir -p build/kernel/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/printf.c.o kernel/printf.c
+mkdir -p build/kernel/fs/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/fs/log.c.o kernel/fs/log.c
+In file included from kernel/fs/log.c:14:
+kernel/fs/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/fs/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/fs/log.c:16:
+kernel/fs/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+mkdir -p build/kernel/fs/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/fs/fs.c.o kernel/fs/fs.c
+In file included from kernel/fs/fs.c:22:
+kernel/fs/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/fs/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/fs/fs.c:23:
+kernel/fs/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+kernel/fs/fs.c: In function ‘bmap’:
+kernel/fs/fs.c:372:1: warning: control reaches end of non-void function [-Wreturn-type]
+  372 | }
+      | ^
+mkdir -p build/kernel/proc/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/proc/exec.c.o kernel/proc/exec.c
+In file included from kernel/proc/exec.c:12:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/proc/exec.c:14:
+kernel/proc/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/proc/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/proc/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/proc/proc.c.o kernel/proc/proc.c
+In file included from kernel/proc/proc.c:12:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/proc/proc.c:17:
+kernel/proc/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/proc/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/interrupt/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/interrupt/interrupt.c.o kernel/interrupt/interrupt.c
+mkdir -p build/kernel/drivers/mmc/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/drivers/mmc/bcm2835_sd.c.o kernel/drivers/mmc/bcm2835_sd.c
+In file included from kernel/drivers/mmc/bcm2835_sd.c:14:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/drivers/mmc/bcm2835_sd.c:17:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+mkdir -p build/kernel/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/console.c.o kernel/console.c
+In file included from kernel/console.c:18:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+mkdir -p build/kernel/buffer/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/buffer/buf.c.o kernel/buffer/buf.c
+In file included from kernel/buffer/buf.c:16:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/arch/aarch64/board/raspi3/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/board/raspi3/kpg.c.o kernel/arch/aarch64/board/raspi3/kpg.c
+mkdir -p build/kernel/arch/aarch64/board/raspi3/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/board/raspi3/uart.c.o kernel/arch/aarch64/board/raspi3/uart.c
+In file included from kernel/arch/aarch64/board/raspi3/uart.c:14:
+kernel/arch/aarch64/board/raspi3/../../../../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+mkdir -p build/kernel/arch/aarch64/board/raspi3/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/board/raspi3/page.c.o kernel/arch/aarch64/board/raspi3/page.c
+mkdir -p build/kernel/arch/aarch64/board/raspi3/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/board/raspi3/irq.c.o kernel/arch/aarch64/board/raspi3/irq.c
+mkdir -p build/kernel/arch/aarch64/board/raspi3/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/board/raspi3/mbox.c.o kernel/arch/aarch64/board/raspi3/mbox.c
+In file included from kernel/arch/aarch64/board/raspi3/mbox.c:14:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/arch/aarch64/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/timer.c.o kernel/arch/aarch64/timer.c
+In file included from kernel/arch/aarch64/timer.c:13:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/arch/aarch64/timer.c:14:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/arch/aarch64/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/switch.S.o kernel/arch/aarch64/switch.S
+mkdir -p build/kernel/arch/aarch64/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/trap.c.o kernel/arch/aarch64/trap.c
+In file included from kernel/arch/aarch64/trap.c:19:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/arch/aarch64/trap.c:20:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+kernel/arch/aarch64/trap.c: In function ‘handle_arch_irq’:
+kernel/arch/aarch64/trap.c:123:18: warning: unused variable ‘irq_pending_2’ [-Wunused-variable]
+  123 |         uint32_t irq_pending_2 = get32(IRQ_PENDING_2);
+      |                  ^~~~~~~~~~~~~
+mkdir -p build/kernel/arch/aarch64/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/entry.S.o kernel/arch/aarch64/entry.S
+mkdir -p build/kernel/arch/aarch64/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/arch/aarch64/trap_asm.S.o kernel/arch/aarch64/trap_asm.S
+mkdir -p build/kernel/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/main.c.o kernel/main.c
+In file included from kernel/main.c:13:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/main.c:15:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+kernel/main.c: In function ‘main’:
+kernel/main.c:43:9: warning: implicit declaration of function ‘exception_handler_init’ [-Wimplicit-function-declaration]
+   43 |         exception_handler_init();
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+mkdir -p build/kernel/memory/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/memory/kalloc.c.o kernel/memory/kalloc.c
+In file included from kernel/memory/kalloc.c:14:
+kernel/memory/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/memory/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+kernel/memory/kalloc.c: In function ‘alloc_init’:
+kernel/memory/kalloc.c:58:5: warning: implicit declaration of function ‘_free_pages_range’; did you mean ‘_free_one_page’? [-Wimplicit-function-declaration]
+   58 |     _free_pages_range(pg_range.begin, pg_range.end);
+      |     ^~~~~~~~~~~~~~~~~
+      |     _free_one_page
+kernel/memory/kalloc.c: At top level:
+kernel/memory/kalloc.c:132:6: warning: conflicting types for ‘_free_pages_range’
+  132 | void _free_pages_range(pg_idx_t begin, pg_idx_t end)
+      |      ^~~~~~~~~~~~~~~~~
+kernel/memory/kalloc.c:58:5: note: previous implicit declaration of ‘_free_pages_range’ was here
+   58 |     _free_pages_range(pg_range.begin, pg_range.end);
+      |     ^~~~~~~~~~~~~~~~~
+mkdir -p build/kernel/memory/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/memory/vm.c.o kernel/memory/vm.c
+In file included from kernel/memory/vm.c:15:
+kernel/printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/memory/vm.c:18:
+kernel/memory/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+mkdir -p build/kernel/pipe/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/pipe/pipe.c.o kernel/pipe/pipe.c
+In file included from kernel/pipe/pipe.c:13:
+kernel/pipe/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/pipe/pipe.h:16,
+                 from kernel/pipe/pipe.c:14:
+kernel/pipe/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/pipe/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/file/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/file/file.c.o kernel/file/file.c
+In file included from kernel/file/file.c:12:
+kernel/file/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/file/file.c:16:
+kernel/file/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/file/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/file/../pipe/pipe.h:16,
+                 from kernel/file/file.c:19:
+kernel/file/../pipe/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/file/../pipe/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/syscall/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/syscall/syscall.c.o kernel/syscall/syscall.c
+In file included from kernel/syscall/syscall.c:15:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/syscall/syscall.c:17:
+kernel/syscall/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/syscall/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/syscall/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/syscall/sysfile.c.o kernel/syscall/sysfile.c
+In file included from kernel/syscall/sysfile.c:19:
+kernel/syscall/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/syscall/sysfile.c:20:
+kernel/syscall/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/syscall/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+In file included from kernel/syscall/../pipe/pipe.h:16,
+                 from kernel/syscall/sysfile.c:22:
+kernel/syscall/../pipe/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/syscall/../pipe/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/syscall/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/syscall/sysproc.c.o kernel/syscall/sysproc.c
+In file included from kernel/syscall/sysproc.c:14:
+kernel/syscall/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+mkdir -p build/kernel/sync/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/sync/spinlock.c.o kernel/sync/spinlock.c
+In file included from kernel/sync/spinlock.c:14:
+kernel/proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
+In file included from kernel/sync/spinlock.c:15:
+kernel/sync/../printf.h:23:80: warning: backslash and newline separated by space
+   23 | {                                                            \
+      |                                                               
+
+kernel/sync/../printf.h:24:80: warning: backslash and newline separated by space
+   24 | "%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
+      |                                                               
+
+mkdir -p build/kernel/sync/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/kernel/sync/sleeplock.c.o kernel/sync/sleeplock.c
+In file included from kernel/sync/sleeplock.c:14:
+kernel/sync/../proc/proc.h:84:29: warning: backslash and newline separated by space
+   84 |     .state = 0,             \
+      |                              
++ as user/initcode.S
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin -nostdlib -ffreestanding -nostartfiles -mcmodel=large -mgeneral-regs-only -MMD -MP -Iuser/src/lib -Iuser/include -Ikernel -Ikernel/include -Ikernel/arch/aarch64/include -Ikernel/interrupt -Ikernel/drives/mmc -Ikernel/arch/aarch64/board/raspi3 -Ikernel/arch/aarch64 -c -o build/user/initcode.o user/initcode.S
++ ld build/user/initcode.out
+aarch64-linux-gnu-ld -N -e start -Ttext 0 -o build/user/initcode.out build/user/initcode.o
++ objcopy build/user/initcode.bin
+aarch64-linux-gnu-objcopy -S -O binary build/user/initcode.out build/user/initcode.bin
++ objdump build/user/initcode.o
+aarch64-linux-gnu-objdump -S build/user/initcode.o > build/user/initcode.asm
+aarch64-linux-gnu-ld -T linker.ld -o build/kernel8.elf  build/kernel/lib/string.c.o build/kernel/printf.c.o build/kernel/fs/log.c.o build/kernel/fs/fs.c.o build/kernel/proc/exec.c.o build/kernel/proc/proc.c.o build/kernel/interrupt/interrupt.c.o build/kernel/drivers/mmc/bcm2835_sd.c.o build/kernel/console.c.o build/kernel/buffer/buf.c.o build/kernel/arch/aarch64/board/raspi3/kpg.c.o build/kernel/arch/aarch64/board/raspi3/uart.c.o build/kernel/arch/aarch64/board/raspi3/page.c.o build/kernel/arch/aarch64/board/raspi3/irq.c.o build/kernel/arch/aarch64/board/raspi3/mbox.c.o build/kernel/arch/aarch64/timer.c.o build/kernel/arch/aarch64/switch.S.o build/kernel/arch/aarch64/trap.c.o build/kernel/arch/aarch64/entry.S.o build/kernel/arch/aarch64/trap_asm.S.o build/kernel/main.c.o build/kernel/memory/kalloc.c.o build/kernel/memory/vm.c.o build/kernel/pipe/pipe.c.o build/kernel/file/file.c.o build/kernel/syscall/syscall.c.o build/kernel/syscall/sysfile.c.o build/kernel/syscall/sysproc.c.o build/kernel/sync/spinlock.c.o build/kernel/sync/sleeplock.c.o -b binary build/user/initcode.bin
+aarch64-linux-gnu-objdump -S -D build/kernel8.elf > build/kernel8.asm
+aarch64-linux-gnu-objdump: error: build/kernel8.elf(.bss) section size (0x135c58 bytes) is larger than file size (0x493e0 bytes)
+aarch64-linux-gnu-objdump: Reading section .bss failed because: memory exhausted
+aarch64-linux-gnu-objdump -x build/kernel8.elf > build/kernel8.hdr
+aarch64-linux-gnu-objcopy -O binary build/kernel8.elf build/kernel8.img
+make -C user
+make[1]: Entering directory '/home/y/Desktop/OS/user'
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/forktest.o src/forktest/forktest.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/printf.o src/lib/printf.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/ulib.o src/lib/ulib.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/umalloc.o src/lib/umalloc.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/echo.o src/echo/echo.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/hello.o src/hello/hello.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/sh.o src/sh/sh.c
+src/sh/sh.c: In function ‘runcmd’:
+src/sh/sh.c:108:16: warning: passing argument 1 of ‘pipe’ from incompatible pointer type [-Wincompatible-pointer-types]
+  108 |       if (pipe(p) < 0)
+      |                ^
+      |                |
+      |                int *
+In file included from src/sh/sh.c:12:
+include/user.h:77:10: note: expected ‘int (*)[2]’ but argument is of type ‘int *’
+   77 | int pipe(int (*)[2]);
+      |          ^~~~~~~~~~
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/stressfs.o src/stressfs/stressfs.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/ls.o src/ls/ls.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/mkdir.o src/mkdir/mkdir.c
+mkdir -p ../build/user/bin
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/bin/cat.o src/cat/cat.c
+mkdir -p ../build/user/src/lib/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/src/lib/usyscall.S.o src/lib/usyscall.S
+mkdir -p ../build/user/src/lib/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/src/lib/printf.c.o src/lib/printf.c
+mkdir -p ../build/user/src/lib/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/src/lib/umalloc.c.o src/lib/umalloc.c
+mkdir -p ../build/user/src/lib/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/src/lib/ulib.c.o src/lib/ulib.c
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/forktest ../build/user/bin/forktest.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/echo ../build/user/bin/echo.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/hello ../build/user/bin/hello.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/sh ../build/user/bin/sh.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/stressfs ../build/user/bin/stressfs.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/ls ../build/user/bin/ls.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/mkdir ../build/user/bin/mkdir.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/cat ../build/user/bin/cat.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+mkdir -p ../build/user/src/init/
+aarch64-linux-gnu-gcc -Wall -g -O0 -fno-pie -fno-pic -fno-stack-protector -static -fno-builtin  -ffreestanding -mgeneral-regs-only -MMD -MP -Iinclude -nostdlib -c -o ../build/user/src/init/init.c.o src/init/init.c
+mkdir -p ../build/user/bin/
+aarch64-linux-gnu-ld -N -e main -Ttext 0 -o ../build/user/bin/init ../build/user/src/init/init.c.o ../build/user/src/lib/usyscall.S.o ../build/user/src/lib/printf.c.o ../build/user/src/lib/umalloc.c.o ../build/user/src/lib/ulib.c.o
+make[1]: Leaving directory '/home/y/Desktop/OS/user'
+Our filesystem files: build/user/bin/init build/user/bin/sh build/user/bin/echo build/user/bin/forktest build/user/bin/hello build/user/bin/cat build/user/bin/ls build/user/bin/mkdir build/user/bin/stressfs
+make -C user
+make[1]: Entering directory '/home/y/Desktop/OS/user'
+make[1]: '../build/user/src/lib/printf.c.o' is up to date.
+make[1]: Leaving directory '/home/y/Desktop/OS/user'
+mkdir -p build/tool
+gcc -o build/tool/mkfs tool/mkfs/mkfs.c
+build/tool/mkfs build/fs.img build/user/bin/init build/user/bin/sh build/user/bin/echo build/user/bin/forktest build/user/bin/hello build/user/bin/cat build/user/bin/ls build/user/bin/mkdir build/user/bin/stressfs
+nmeta 59 (boot, super, log blocks 30 inode blocks 26, bitmap blocks 1) blocks 941 total 1000
+input: 'build/user/bin/init' -> 'init'
+input: 'build/user/bin/sh' -> 'sh'
+input: 'build/user/bin/echo' -> 'echo'
+input: 'build/user/bin/forktest' -> 'forktest'
+input: 'build/user/bin/hello' -> 'hello'
+input: 'build/user/bin/cat' -> 'cat'
+input: 'build/user/bin/ls' -> 'ls'
+input: 'build/user/bin/mkdir' -> 'mkdir'
+input: 'build/user/bin/stressfs' -> 'stressfs'
+balloc: first 363 blocks have been allocated
+balloc: write bitmap block at sector 58
+dd if=/dev/zero of=build/boot.img seek=131071 bs=512 count=1
+1+0 records in
+1+0 records out
+512 bytes copied, 0.000134316 s, 3.8 MB/s
+mkfs.vfat -F 32 -s 1 build/boot.img
+mkfs.fat 4.1 (2017-01-24)
+mcopy -i build/boot.img build/kernel8.img ::kernel8.img;  mcopy -i build/boot.img tool/boot/LICENCE.broadcom ::LICENCE.broadcom;  mcopy -i build/boot.img tool/boot/bootcode.bin ::bootcode.bin;  mcopy -i build/boot.img tool/boot/config.txt ::config.txt;  mcopy -i build/boot.img tool/boot/fixup.dat ::fixup.dat;  mcopy -i build/boot.img tool/boot/start.elf ::start.elf;
+dd if=/dev/zero of=build/sd.img seek=262143 bs=512 count=1
+1+0 records in
+1+0 records out
+512 bytes copied, 0.000171438 s, 3.0 MB/s
+Checking that no-one is using this disk right now ... OK
+
+Disk build/sd.img: 128 MiB, 134217728 bytes, 262144 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+>>> Created a new DOS disklabel with disk identifier 0x2f8400d8.
+build/sd.img1: Created a new partition 1 of type 'W95 FAT32 (LBA)' and of size 64 MiB.
+build/sd.img2: Created a new partition 2 of type 'Linux' and of size 63 MiB.
+build/sd.img3: Done.
+
+New situation:
+Disklabel type: dos
+Disk identifier: 0x2f8400d8
+
+Device        Boot  Start    End Sectors Size Id Type
+build/sd.img1        2048 133119  131072  64M  c W95 FAT32 (LBA)
+build/sd.img2      133120 262143  129024  63M 83 Linux
+
+The partition table has been altered.
+Syncing disks.
+dd if=build/boot.img of=build/sd.img seek=2048 conv=notrunc
+131072+0 records in
+131072+0 records out
+67108864 bytes (67 MB, 64 MiB) copied, 0.435696 s, 154 MB/s
+dd if=build/fs.img of=build/sd.img seek=133120 conv=notrunc
+1000+0 records in
+1000+0 records out
+512000 bytes (512 kB, 500 KiB) copied, 0.00297601 s, 172 MB/s
+qemu-system-aarch64 -M raspi3 -nographic -serial null -serial mon:stdio -drive file=build/sd.img,if=sd,format=raw -kernel build/kernel8.img
