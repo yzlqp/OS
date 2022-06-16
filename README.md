@@ -270,6 +270,9 @@ console       3 11 0
 \$   
 ***
 ## Update log 
+* Jun 16,2022      
+上传github仓库     
+
 * Jun 6, 2022  
 添加启动成功的提示           
 添加hello文件   
