@@ -168,7 +168,7 @@ Based on ARMv8, mainly referring to xv6 and Linux kernel
 \********************************************************************************    
 kernel booing...  
 Buddy system info:  
-Managed_pages: 255025 $~~$ Available pages: 255025 $~~$ bytes: 1044582400    
+Managed_pages: 255025  Available pages: 255025  bytes: 1044582400    
 Each order:  
 Order: 0	 free: 1	 pages:1  
 Order: 1	 free: 0	 pages:0  
@@ -255,18 +255,18 @@ main: [CPU 1] started.
 \$ echo hello,OS  
 hello,OS  
 \$ ls  
-.        $~~~~~~~~~~~~~$       1 1 512   
-..       $~~~~~~~~~~~~$       1 1 512  
-init     $~~~~~~~~~$       2 2 15440  
-sh       $~~~~~~~~~~$       2 3 23856  
-echo     $~~~~~~$       2 4 15048  
-forktest $~~$       2 5 15376  
-hello    $~~~~~~$      2 6 15232   
-cat      $~~~~~~~~~$      2 7 15584  
-ls       $~~~~~~~~~~~$      2 8 16752  
-mkdir    $~~~~~$      2 9 15072  
-stressfs $~~~$      2 10 15456  
-console  $~~$      3 11 0  
+.              1 1 512   
+..             1 1 512  
+init            2 2 15440  
+sh             2 3 23856  
+echo            2 4 15048  
+forktest        2 5 15376  
+hello          2 6 15232   
+cat            2 7 15584  
+ls             2 8 16752  
+mkdir        2 9 15072  
+stressfs       2 10 15456  
+console       3 11 0  
 \$   
 ***
 ## Update log 
