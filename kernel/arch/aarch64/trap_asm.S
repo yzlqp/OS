@@ -137,8 +137,6 @@ ENDPROC(el_irq)
 ret_to_user:
     kernel_exit 0
 
-.align 11
-
 /*
  * Exception Vectors entry point 
  * EL3, EL2 and EL1 each have a vector table
@@ -165,6 +163,7 @@ ret_to_user:
  * 0x780  SError/vSError
  ********************************
  */
+ .align 11
 ENTRY(vectors)
 el_sp0:
     // The first four with SP0 will not be accepted 

@@ -369,6 +369,7 @@ static uint32_t bmap(struct inode *ip, uint32_t bn)
         return addr;
     }
     panic("bmap bn: %d is out of range.\n", bn);
+    return -1;
 }
 
 /*

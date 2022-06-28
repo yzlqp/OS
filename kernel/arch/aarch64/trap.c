@@ -120,7 +120,7 @@ void handle_arch_irq(struct trapframe *frame_ptr)
         yield();
     } else {
         uint32_t irq_pending_1 = get32(IRQ_PENDING_1);
-        uint32_t irq_pending_2 = get32(IRQ_PENDING_2);
+        //uint32_t irq_pending_2 = get32(IRQ_PENDING_2);  // unused
         if (irq_pending_1 & AUX_INT) {
             uartintr();
         }

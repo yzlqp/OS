@@ -32,4 +32,10 @@ void disable_interrupt();
  */
 bool is_interrupt_enabled();
 
+/**
+ * @brief Interrupt subsystem initialization, Load base address of EL1's exception vector table to vbar_el1
+ * @retval None
+ */
+void exception_handler_init(void);
+
 #endif /* INTERRUPT_H */

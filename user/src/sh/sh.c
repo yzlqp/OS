@@ -64,6 +64,7 @@ struct cmd *parsecmd(char *);
 void runcmd(struct cmd *cmd)
 {
 	int p[2];
+	int (*pp)[2] = &p;
 	struct backcmd *bcmd;
 	struct execcmd *ecmd;
 	struct listcmd *lcmd;
@@ -105,7 +106,7 @@ void runcmd(struct cmd *cmd)
 
   		case PIPE:
     		pcmd = (struct pipecmd*)cmd;
-    		if (pipe(p) < 0)
+    		if (pipe(pp) < 0)
       			panic("pipe");
     		if (fork1() == 0) {
       			close(1);

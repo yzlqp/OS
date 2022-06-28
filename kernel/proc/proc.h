@@ -83,7 +83,7 @@ struct cpu {
 
 #define INIT_TASK(task)     \
 {                           \
-    .state = 0,             \ 
+    .state = 0,             \
     .pid = 0,               \
     .flags = PF_KTHREAD,    \
     .priority = 1,          \

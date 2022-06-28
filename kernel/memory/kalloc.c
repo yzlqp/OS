@@ -20,6 +20,7 @@
 
 extern void pages_init(struct pg_range* range);
 static inline void _free_one_page(struct page * page, pg_idx_t pg_idx, order_t order);
+static void _free_pages_range(pg_idx_t begin, pg_idx_t end);
 
 /*
  * MAX_ORDER linked lists head for buddy systems
@@ -129,7 +130,7 @@ static void _free_page(pg_idx_t pfn, order_t order)
 /*
  * Releases pages in the specified range
  */
-void _free_pages_range(pg_idx_t begin, pg_idx_t end)
+static void _free_pages_range(pg_idx_t begin, pg_idx_t end)
 {
     order_t order;
     while (begin < end) {

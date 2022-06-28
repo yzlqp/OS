@@ -20,8 +20,8 @@
  */
 #define assert(x)                                                              \
     ({                                                                         \
-        if (!(x)) {                                                            \    
-            panic("%s:%d: assertion failed.\n", __FILE__, __LINE__);           \ 
+        if (!(x)) {                                                            \
+            panic("%s:%d: assertion failed.\n", __FILE__, __LINE__);           \
         }                                                                      \
     })
 

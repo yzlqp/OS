@@ -13,8 +13,6 @@
 #include "arch/aarch64/arm.h"
 #include "interrupt.h"
 
-extern void exception_handler_init(void);
-
 /*
  * Enable all interrupt exceptions DAIF (Interrupt Mask Bits)
  */
