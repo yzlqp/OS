@@ -19,7 +19,8 @@ FS_OFFSET := $(shell echo $$(($(BOOT_OFFSET) + $(BOOT_SECTORS))))
 FS_SECTORS := $(shell echo $$(($(SECTORS) - $(FS_OFFSET))))
 BUILD_BIN_DIR := $(BUILD_DIR)/user/bin
 USER_BIN := $(BUILD_BIN_DIR)/sh $(BUILD_BIN_DIR)/echo $(BUILD_BIN_DIR)/forktest $(BUILD_BIN_DIR)/hello  \
-			$(BUILD_BIN_DIR)/cat $(BUILD_BIN_DIR)/ls $(BUILD_BIN_DIR)/mkdir $(BUILD_BIN_DIR)/stressfs 
+			$(BUILD_BIN_DIR)/cat $(BUILD_BIN_DIR)/ls $(BUILD_BIN_DIR)/mkdir $(BUILD_BIN_DIR)/stressfs	\
+			$(BUILD_BIN_DIR)/sleep $(BUILD_BIN_DIR)/xargs $(BUILD_BIN_DIR)/find
 
 # Delete if build fails
 .DELETE_ON_ERROR: $(BOOT_IMG) $(SD_IMG)

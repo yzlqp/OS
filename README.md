@@ -270,6 +270,10 @@ console       3 11 0
 \$   
 ***
 ## Update log 
+* Aug 1, 2022
+添加find,xargs命令
+添加sleep测试
+
 * Jun 28,2022      
 fix some compiler warnings
 
@@ -427,10 +431,11 @@ Start my OS
 ## Reference    
 ***
 1、https://github.com/mit-pdos/xv6-riscv   
-2、https://developer.arm.com/documentation   
+2、https://developer.arm.com/documentation     
 3、https://www.kernel.org/doc/html/latest/#   
 4、http://www.wowotech.net/sort/armv8a_arch     
 5、https://pdos.csail.mit.edu/6.828/2021/schedule.html   
 6、https://github.com/huihongxiao/MIT6.S081     
 7、https://blog.csdn.net/u013577996/article/details/108679997     
-8、https://www.ibm.com/docs/en/xl-c-aix/13.1.2?topic=extension-atomic-lock-release-synchronize-functions    
+8、https://www.ibm.com/docs/en/xl-c-aix/13.1.2?topic=extension-atomic-lock-release-synchronize-functions
+9、https://datasheets.raspberrypi.com/bcm2835/bcm2835-peripherals.pdf       
